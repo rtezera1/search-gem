@@ -1,15 +1,13 @@
-# Movie::Search
+# Movie Search
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/movie/search`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Gem that interacts with the OMDapi to find the years movies were released.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'movie-search'
+gem 'search-gem'
 ```
 
 And then execute:
@@ -18,11 +16,18 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install movie-search
+    $ gem install search-gem
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+  require 'search-gem'
+
+  movies = ['Titanic', 'The-Matrix', 'Training-day']
+
+  yearReleased = Search.OMDBapi(movies)
+```
+
 
 ## Development
 
