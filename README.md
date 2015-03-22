@@ -7,7 +7,7 @@ Gem that interacts with the OMDapi to find the years movies were released.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'search-gem'
+gem 'movie-search'
 ```
 
 And then execute:
@@ -16,16 +16,21 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install search-gem
+    $ gem install movie-search
 
 ## Usage
 
 ```ruby
-  require 'search-gem'
+  require 'movie-search'
 
-  movies = ['Titanic', 'The-Matrix', 'Training-day']
+  moviesList = ['Titanic', 'The-Matrix', 'Training-day']
 
-  yearReleased = Search.OMDBapi(movies)
+  search = Search.new(moviesList)
+
+  result = search.OMDBapi
+
+  result = {'Titanic' => '1997', 'The Matrix' => '1999', 'Training Day' => '2001' }
+  
 ```
 
 
