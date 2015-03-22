@@ -1,0 +1,6 @@
+require 'dotenv'
+
+Dotenv.load
+
+repo_token = ENV['repo_token']
+
