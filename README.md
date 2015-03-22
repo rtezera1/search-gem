@@ -1,4 +1,7 @@
 # Movie Search
+[![Build Status](https://travis-ci.org/rtezera1/search-gem.svg?branch=master)](https://travis-ci.org/rtezera1/search-gem)
+
+[![Coverage Status](https://coveralls.io/repos/rtezera1/search-gem/badge.svg)](https://coveralls.io/r/rtezera1/search-gem)
 
 Gem that interacts with the OMDapi to find the years movies were released.
 
