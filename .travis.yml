@@ -1,17 +1,7 @@
 language: ruby
 rvm:
   - 2.1.2
-install: 
-  - sudo apt-get install -y lcov
-  - gem install coveralls-lcov
-before_script: 
-  - bundle install
-  - ./autogen.sh
-  - ./configure --enable-coverage
-script: 
-  - bundle exec rspec
-after_success:
-  - lcov --compat-libtool --directory . --capture --output-file coverage.info
-  - coveralls-lcov coverage.info
+before_script: bundle install
+script: bundle exec rspec
 notifications: 
   email: false 

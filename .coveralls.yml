@@ -1,6 +1,4 @@
-require 'dotenv'
+service_name: travis-ci
 
-Dotenv.load
-
-repo_token = ENV['repo_token']
+repo_token: 5ahu7VK4C5pw92s8efiSshGKU54QFDnWT
 
