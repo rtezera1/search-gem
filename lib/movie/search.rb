@@ -1,5 +1,5 @@
 require "movie/search/version"
-require 'HTTParty'
+require 'httparty'
 require 'pry'
 require 'json'
 class Search
