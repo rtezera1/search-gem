@@ -33,7 +33,7 @@ Or install it yourself as:
 
   result = search.OMDBapi
 
-  result = {'Titanic' => '1997', 'The Matrix' => '1999', 'Training Day' => '2001' }
+  puts result = {'Titanic' => '1997', 'The Matrix' => '1999', 'Training Day' => '2001' }
   
 ```
 
