@@ -38,12 +38,17 @@ Or install it yourself as:
 or use it by parsing excel spreadsheet
 
 ```ruby
-    require 'movie-search'
-    excel_path = Dir.pwd + "/spec/movies.xls"
-    parsed = Parse.new excel_path
-    titles = parsed.parse
-    search = Search.new titles
-    puts search = {"Titanic"=>"1997", "Training Day"=>"2001", "A Few Good Men"=>"1992", "Rounders"=>"1998", "The Godfather"=>"1972"}
+  require 'movie-search'
+
+  excel_path = Dir.pwd + "/spec/movies.xls"
+
+  parsed = Parse.new excel_path
+
+  titles = parsed.parse
+
+  search = Search.new titles
+  
+  puts search = {"Titanic"=>"1997", "Training Day"=>"2001", "A Few Good Men"=>"1992", "Rounders"=>"1998", "The Godfather"=>"1972"}
   
 ```
 
