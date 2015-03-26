@@ -34,9 +34,11 @@ Or install it yourself as:
   result = search.OMDBapi
 
   puts result = {'Titanic' => '1997', 'The Matrix' => '1999', 'Training Day' => '2001' }
+```
+or use it by parsing excel spreadsheet
 
-  or use it by parsing excel spreadsheet
-
+```ruby
+    require 'movie-search'
     excel_path = Dir.pwd + "/spec/movies.xls"
     parsed = Parse.new excel_path
     titles = parsed.parse
