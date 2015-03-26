@@ -24,4 +24,12 @@ describe Search do
     search = Search.new titles
     expect{search.OMDBapi}.to raise_error('Movie not found!')
   end
+
+  it 'should parse excel and provide the name and year released' do 
+    excel_path = Dir.pwd + "/spec/movies.xls"
+    parsed = Parse.new excel_path
+    titles = parsed.parse
+    search = Search.new titles
+    expect(search.OMDBapi).to eq({"Titanic"=>"1997", "Training Day"=>"2001", "A Few Good Men"=>"1992", "Rounders"=>"1998", "The Godfather"=>"1972"})
+  end
 end

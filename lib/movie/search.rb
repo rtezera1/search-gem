@@ -1,7 +1,9 @@
 require "movie/search/version"
+require "xls_parse.rb"
 require 'httparty'
 require 'pry'
 require 'json'
+
 class Search
   def initialize titles
     @titles = titles
@@ -13,6 +15,7 @@ class Search
     if @titles.kind_of?(Array) == true
       # loop through each title and make a request
       @titles.each do |title|
+        title = title.downcase.tr(" ", "+")
         url = 'http://www.omdbapi.com/?t=' + title + '&y=&plot=short&r=json'
         response = HTTParty.get(url)
         responseObject = JSON.parse(response)
